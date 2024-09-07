@@ -1,41 +1,42 @@
 {
-  "name": "@ookamiiixd/baileys-store",
-  "version": "1.0.0-beta.1",
-  "description": "Minimal Baileys data storage for your favorite DBMS built with Prisma",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "repository": "https://github.com/ookamiiixd/baileys-store.git",
-  "author": "Royhan (https://github.com/ookamiiixd)",
-  "license": "MIT",
-  "scripts": {
-    "build": "tsc",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint .",
-    "format": "prettier . --write"
-  },
-  "devDependencies": {
-    "@adiwajshing/baileys": "^5.0.0",
-    "@prisma/client": "^4.7.1",
-    "@types/node": "^18.11.10",
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
-    "eslint": "^8.29.0",
-    "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.8.0",
-    "prisma": "^4.7.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.3"
-  },
-  "dependencies": {
-    "tiny-invariant": "^1.3.1"
-  },
-  "peerDependencies": {
-    "@adiwajshing/baileys": "^5.0.0",
-    "@prisma/client": "^4.7.0"
-  },
-  "files": [
-    "dist/",
-    "prisma/schema.prisma",
-    ".env.example"
-  ]
+	"name": "@PakaiWA/baileys-store",
+	"version": "0.1.0-alpha0027",
+	"description": "Minimal Baileys data storage for your favorite DBMS built with Prisma",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"repository": "https://github.com/PakaiWA/baileys-store.git",
+	"author": "Call Vin (https://github.com/KAnggara75)",
+	"license": "MIT",
+	"scripts": {
+		"build": "tsc",
+		"typecheck": "tsc --noEmit",
+		"fc": " prettier --write . &&  eslint --fix . &&  prettier --check . &&  eslint ."
+	},
+	"devDependencies": {
+		"@prisma/client": "^5.19.1",
+		"@types/node": "^22.5.4",
+		"@typescript-eslint/eslint-plugin": "^8.4.0",
+		"@typescript-eslint/parser": "^8.4.0",
+		"@whiskeysockets/baileys": "^6.7.7",
+		"eslint": "^9.10.0",
+		"eslint-config-prettier": "^9.1.0",
+		"globals": "^15.9.0",
+		"long": "^5.2.3",
+		"prettier": "^3.3.3",
+		"prisma": "^5.19.1",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.5.4"
+	},
+	"dependencies": {
+		"tiny-invariant": "^1.3.3"
+	},
+	"peerDependencies": {
+		"@prisma/client": "^5.19.1",
+		"@whiskeysockets/baileys": "^6.0.0"
+	},
+	"files": [
+		"dist/",
+		"prisma/schema.prisma",
+		".env.example"
+	]
 }
