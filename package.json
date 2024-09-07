@@ -21,6 +21,7 @@
 		"eslint": "^9.10.0",
 		"eslint-config-prettier": "^9.1.0",
 		"globals": "^15.9.0",
+		"long": "^5.2.3",
 		"prettier": "^3.3.3",
 		"prisma": "^5.19.1",
 		"ts-node": "^10.9.2",

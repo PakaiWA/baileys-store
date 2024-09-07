@@ -1,6 +1,5 @@
-import type { AuthenticationCreds, SignalDataTypeMap } from '@adiwajshing/baileys';
-import { proto } from '@adiwajshing/baileys';
-import { BufferJSON, initAuthCreds } from '@adiwajshing/baileys';
+import type { AuthenticationCreds, SignalDataTypeMap } from '@whiskeysockets/baileys';
+import { proto, BufferJSON, initAuthCreds } from '@whiskeysockets/baileys';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 import { useLogger, usePrisma } from './shared';
 
