@@ -9,33 +9,33 @@ import { FlatCompat } from '@eslint/eslintrc';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
+	baseDirectory: __dirname,
+	recommendedConfig: js.configs.recommended,
+	allConfig: js.configs.all,
 });
 
 export default [
-  ...compat.extends('eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'),
-  { ignores: ['node_modules/', 'dist'] },
-  { files: ['**/*.{js,mjs,cjs,ts}'] },
-  {
-    plugins: {
-      '@typescript-eslint': typescriptEslint,
-    },
+	...compat.extends('eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'),
+	{ ignores: ['node_modules/', 'dist'] },
+	{ files: ['**/*.{js,mjs,cjs,ts}'] },
+	{
+		plugins: {
+			'@typescript-eslint': typescriptEslint,
+		},
 
-    languageOptions: {
-      globals: {
-        ...globals.node,
-      },
+		languageOptions: {
+			globals: {
+				...globals.node,
+			},
 
-      parser: tsParser,
-    },
+			parser: tsParser,
+		},
 
-    rules: {
-      '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/no-unused-vars': 'error',
-      '@typescript-eslint/no-explicit-any': 'off',
-      '@typescript-eslint/no-non-null-assertion': 'off',
-    },
-  },
+		rules: {
+			'@typescript-eslint/consistent-type-imports': 'error',
+			'@typescript-eslint/no-unused-vars': 'error',
+			'@typescript-eslint/no-explicit-any': 'off',
+			'@typescript-eslint/no-non-null-assertion': 'off',
+		},
+	},
 ];

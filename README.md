@@ -64,8 +64,8 @@ const prisma = new PrismaClient();
 
 // You only need to run this once
 initStore({
-  prisma, // Prisma client instance
-  logger, // Pino logger (Optional)
+	prisma, // Prisma client instance
+	logger, // Pino logger (Optional)
 });
 
 // Create a store and start listening to the events
