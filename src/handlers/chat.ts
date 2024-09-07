@@ -46,8 +46,8 @@ export default function chatHandler(sessionId: string, event: BaileysEventEmitte
               create: { ...data, sessionId },
               update: data,
               where: { sessionId_id: { id: data.id, sessionId } },
-            })
-          )
+            }),
+          ),
       );
     } catch (e) {
       logger.error(e, 'An error occured during chats upsert');

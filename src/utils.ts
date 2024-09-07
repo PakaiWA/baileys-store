@@ -5,7 +5,7 @@ import type { MakeTransformedPrisma, MakeSerializedPrisma } from './types';
 /** Transform object props value into Prisma-supported types */
 export function transformPrisma<T extends Record<string, any>>(
   data: T,
-  removeNullable = true
+  removeNullable = true,
 ): MakeTransformedPrisma<T> {
   const obj = { ...data } as any;
 
@@ -25,7 +25,7 @@ export function transformPrisma<T extends Record<string, any>>(
 /** Transform prisma result into JSON serializable types */
 export function serializePrisma<T extends Record<string, any>>(
   data: T,
-  removeNullable = true
+  removeNullable = true,
 ): MakeSerializedPrisma<T> {
   const obj = { ...data } as any;
 

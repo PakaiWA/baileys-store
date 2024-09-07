@@ -68,7 +68,7 @@ export async function useSession(sessionId: string) {
                 value = proto.Message.AppStateSyncKeyData.fromObject(value);
               }
               data[id] = value;
-            })
+            }),
           );
           return data;
         },

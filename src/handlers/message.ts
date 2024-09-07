@@ -173,7 +173,7 @@ export default function messageHandler(sessionId: string, event: BaileysEventEmi
 
           const authorID = getKeyAuthor(reaction.key);
           const reactions = ((message.reactions || []) as proto.IReaction[]).filter(
-            (r) => getKeyAuthor(r.key) !== authorID
+            (r) => getKeyAuthor(r.key) !== authorID,
           );
 
           if (reaction.text) reactions.push(reaction);

@@ -27,7 +27,7 @@ export default function contactHandler(sessionId: string, event: BaileysEventEmi
             create: { ...data, sessionId },
             update: data,
             where: { sessionId_id: { id: data.id, sessionId } },
-          })
+          }),
         );
 
       await Promise.any([
@@ -36,7 +36,7 @@ export default function contactHandler(sessionId: string, event: BaileysEventEmi
       ]);
       logger.info(
         { deletedContacts: deletedOldContactIds.length, newContacts: contacts.length },
-        'Synced contacts'
+        'Synced contacts',
       );
     } catch (e) {
       logger.error(e, 'An error occured during contacts set');
@@ -54,8 +54,8 @@ export default function contactHandler(sessionId: string, event: BaileysEventEmi
               create: { ...data, sessionId },
               update: data,
               where: { sessionId_id: { id: data.id, sessionId } },
-            })
-          )
+            }),
+          ),
       );
     } catch (e) {
       logger.error(e, 'An error occured during contacts upsert');
