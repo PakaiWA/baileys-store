@@ -11,7 +11,7 @@ export function setPrisma(prismaClient: PrismaClient) {
 }
 
 export function setLogger(pinoLogger?: SocketConfig['logger']) {
-	logger = pinoLogger || DEFAULT_CONNECTION_CONFIG.logger;
+	logger = pinoLogger ?? DEFAULT_CONNECTION_CONFIG.logger;
 }
 
 export function usePrisma() {
