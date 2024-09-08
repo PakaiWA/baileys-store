@@ -10,7 +10,7 @@ import type { BaileysEventHandler } from '../types';
 import { transformPrisma } from '../utils';
 
 const getKeyAuthor = (key: WAMessageKey | undefined | null) =>
-	(key?.fromMe ? 'me' : key?.participant || key?.remoteJid) || '';
+	(key?.fromMe ? 'me' : (key?.participant ?? key?.remoteJid)) ?? '';
 
 export default function messageHandler(sessionId: string, event: BaileysEventEmitter) {
 	const prisma = usePrisma();
